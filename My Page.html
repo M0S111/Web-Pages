@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>CV</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		
+		$(function(){
+
+			$(".cbp-fbscroller > nav a").click(function(event){
+
+				if ($("a").hasClass("clicked")) {
+
+					$("a").removeClass("clicked");
+
+				}
+
+				$(this).addClass("clicked");
+
+
+				if (this.hash !== "") {
+  				
+  				event.preventDefault();
+
+  				
+  				var hash = this.hash;
+
+				$('html,body').animate({scrollTop: $(hash).offset().top},500,function(){
+
+    			window.location.hash = hash;
+
+      			});
+
+
+				};
+
+			});
+
+		});
+
+
+	</script>
+
+	<style type="text/css">
+
+		/* Set all parents to full height */
+		html, body, 
+		.container,
+		.cbp-fbscroller,
+		.cbp-fbscroller section { 
+			height: 100%;
+		}
+
+		body{
+			background-image: linear-gradient(black,whitesmoke,grey);
+		}
+
+		.cbp-fbscroller > nav {
+			position: fixed;
+			z-index: 9999;
+			left: 25px;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+
+		.cbp-fbscroller > nav a {
+			display: block;
+			position: relative;
+			color: transparent;
+			height: 50px;
+		}
+
+		.cbp-fbscroller > nav a:after {
+			content: '';
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			border: 4px solid #fff;
+		}
+
+		.cbp-fbscroller > nav a:hover:after {
+			background: rgba(255,255,255,0.6);
+		}
+
+		.cbp-fbscroller > nav a.clicked:after {
+			background: #fff;
+		}
+
+		/* background-attachment does the trick */
+		.cbp-fbscroller section {
+			position: relative;
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: contain;
+		}
+
+		#fbsection1 {
+			background-image: url("file:///C:/Users/M Sheharyar/Desktop/Game Dev & Anim. tools/Logos/Vid Channel/3x/channel logo@3x.png");
+		}
+
+		#fbsection2 {
+			background-image: url("file:///C:/Users/M Sheharyar/Desktop/Game Dev & Anim. tools/Logos/Bottled Lightning/BL Logopng@3x.png");
+		}
+
+
+
+		#fbsection3 {
+			background-image: url(file:///C:/Users/M Sheharyar/Desktop/Game Dev & Anim. tools/Logos/);
+		}
+
+		#fbsection4 {
+			background-image: url(../images/4.jpg);
+		}
+
+		#fbsection5 {
+			background-image: url(../images/5.jpg);
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div id="cbp-fbscroller" class="cbp-fbscroller">
+		<nav>
+			<a href="#fbsection1">Section 1</a>
+			<a href="#fbsection2">Section 2</a>
+			<a href="#fbsection3">Section 3</a>
+			<a href="#fbsection4">Section 4</a>
+			<a href="#fbsection5">Section 5</a>
+		</nav>
+		<section id="fbsection1"></section>
+		<section id="fbsection2"></section>
+		<section id="fbsection3"></section>
+		<section id="fbsection4"></section>
+		<section id="fbsection5"></section>
+	</div>
+
+</body>
+
+</html>

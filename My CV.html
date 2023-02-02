@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My CV</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script> 
+            $(document).ready(function(){
+
+                var num = 0;
+
+                $("#gola").click(function(){
+                $(this).addClass("section");
+                $(this).css({"display":"block","width":"70%","height":"auto"});
+                $(this).html($("div:not(:empty)").eq(num).html());
+                num++;
+                if (($(this).css("border-radius"))!='10px') 
+                    {$(this).animate({
+                  borderRadius: '10px'},1,function(){$(this).animate({
+                  borderRadius: '50%'})});
+
+                    $(this).animate({
+                  borderRadius: '10px'});
+                }
+
+                if ($(this).is($(":contains('rights')"))) {
+                    num = 0;
+                    $(this).html($("#About").html());}
+                
+                });
+            });
+        </script>
+
+        <style type="text/css">
+
+            body {
+                font-family: "Consolas";
+                font-size: 13pt;
+                background-color: #000000;
+                color: #20bcd5;
+                padding: 10px;
+            }
+            #gola {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: auto;
+            margin-bottom: 30px;
+            box-shadow: 
+                0 0 10px #fff,
+                -10px 10px 80px #f0f,
+                10px -10px 80px #0ff,
+                inset 0 0 50px #fff,
+                inset 0px -15px 30px #f0f,
+                inset 0px 15px 30px #0ff,
+                inset 0px -15px 70px #f0f,
+                inset 0px 15px 70px #0ff;
+            animation: pulsate 1s linear infinite alternate;
+            }
+            h1 {
+                font-size: 15pt;
+                color: #20bcd5;
+                text-align: center;
+                padding: 18px 0 18px 0;
+                margin: 0 0 10px 0;
+            }
+            h1 span {
+                border-bottom: 4px solid #20bcd5;
+                box-shadow: 
+                    /*0 0 10px #fff,*/
+                    -10px 10px 80px #f0f,
+                    10px -10px 80px #0ff,
+                    inset 0 0 50px #fff,
+                    inset 0px -15px 30px #f0f,
+                    inset 0px 15px 30px #0ff,
+                    inset 0px -15px 70px #f0f,
+                    inset 0px 15px 70px #0ff;
+                animation: pulsate 1s linear infinite alternate;
+                border-radius: 10px;
+                padding: 10px;
+            }
+            .content {
+                padding: 0;
+                margin: 0;
+                color: #20bcd5;
+            }
+            .img-circle {
+                border: 3px solid white;
+                border-radius: 50%;
+            }
+            .section {
+                display: none;
+                background:rgba(255, 0, 255, 0.3);
+                padding: 15px;
+                margin: auto;
+                margin-bottom: 30px;
+                width: 700px;
+                height: auto;
+                text-align: center;
+                border-radius: 50%;
+                /*border-style: hidden;
+                border-width: thin;
+                border-color: blueviolet;*/
+                position: static;
+                box-shadow: 
+                    0 0 10px #fff,
+                    -10px 10px 80px #f0f,
+                    10px -10px 80px #0ff,
+                    inset 0 0 50px #fff,
+                    inset 0px -15px 30px #f0f,
+                    inset 0px 15px 30px #0ff,
+                    inset 0px -15px 70px #f0f,
+                    inset 0px 15px 70px #0ff;
+                animation: pulsate 1s linear infinite alternate;
+            }
+            @keyframes pulsate {
+
+            100% {
+                box-shadow: 0 0 20px #fff, -20px 20px 80px #f0f, 20px -20px 80px #0ff, inset 0 0 50px #fff, inset 0px -30px 30px #f0f, inset 0px 30px 30px #0ff, inset 0px -30px 70px #f0f, inset 0px 30px 70px #0ff;}
+            }
+
+            #header {
+                background-image: url("https://www.sololearn.com/Uploads/header.jpg");
+                background-size: cover;
+            }
+            #header img {
+                display: block;
+                margin: auto;
+            }
+            #header p {
+                font-size: 25pt;
+                color: orange;
+                padding-top: 5px;
+                margin: 0;
+                font-weight: bold;
+                text-align: center;
+            }
+            .quote {
+                font-size: 12pt;
+                text-align: center;
+                margin-top: 10px;
+            }
+            table {
+                width: 100%;
+            }
+            table, th, td {
+                border: 2px solid #cecece;
+
+                text-align: center;
+                table-layout: fixed;
+            }
+            .selected {
+                background-color: #7fb2ff;
+                font-weight: bold;
+                color: white;
+            }
+            li {
+                margin-bottom: 15px;
+                font-weight: bold;
+            }
+            progress {
+                width: 70%;
+                height: 10px;
+            }
+            iframe, audio {
+                display: block;
+                margin: 0 auto;
+                border: 3px solid #3fb6b2;
+            }
+            hr {
+                border: 0;
+                height: 1px;
+                background: #f36f48;
+            }
+            form {
+                text-align: center;
+                margin-top: 0;
+            }
+            .submit {
+                background-color: #3fb6b2;
+                padding: 12px 45px;
+                border-radius: 5px;
+                cursor: pointer;
+                color: #ffffff;
+                border: none;
+                outline: none;
+                margin: 0;
+                font-weight: bold;
+            }
+            .submit:hover {
+                background-color: #43a09d;
+            }
+            textarea {
+                height: 100px;
+            }
+            input, textarea {
+                margin-bottom: 10px;
+                font-size: 11pt;
+                padding: 15px 10px 10px;
+                border: 1px solid #cecece;
+                background-color: #efefef;
+                color: #787575;
+                border-radius: 5px;
+                width: 70%;
+                outline: none;
+            }
+            /*.face {
+                transform: scale(0.4);
+                margin: 0 auto;
+                display: block;
+                margin-top: -35px;
+                margin-bottom: -25px;
+            }*/
+            #Social img {
+                height: 10px;
+                width: 10px;
+                margin-left: 7px;
+                margin-right: 7px;
+            }
+            #Social a {
+                text-decoration: none;
+            }
+            #Social img:hover {
+                opacity: 0.8;
+            }
+            #Social {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div id="gola"></div>
+
+        <!-- header start -->
+        <!-- <div id="header" class="section">
+            img alt="" class="img-circle" src="file:///C:/Users/M Sheharyar/Desktop/Game Dev & Anim. tools/Logos/Defth/PNG/Asset 1xxxhdpi.png"
+            <p style='font-size: x-large;'>Mohammad Sheharyar</p>
+        </div> -->
+        <!-- header end -->
+        
+        <!-- About Me section start -->
+        <div class="section" id="About">
+            <h1><span style="font-size: x-large;">Mohammad Sheharyar</span></h1>
+            <p class="content">
+                Hey! I'm <strong>Sheharyar</strong>. Coding has changed my world. It's not just about apps. Learning to code gave me <i>problem-solving skills</i> and a way to communicate with others on a technical level. I can also develop websites and use my coding skills to get a better job.
+            </p>
+            <p class="quote">"Declare variables, not war"</p>
+        </div>
+        <!-- About Me section end -->
+        
+
+        
+        
+        <!-- My Skills section start -->
+        <div class="section" id="Skills">
+            <h1><span>My Skills</span></h1>
+           
+                <li>HTML <br />
+                    <progress value="1.0" max="1.0"></progress>
+                </li>
+                <li>JavaScript <br />
+                    <progress value="0.7" max="1.0"></progress>
+                </li>
+                <li>Python <br />
+                    <progress value="0.9" max="1.0"></progress>
+                </li>
+            
+        </div>
+        <!-- My Skills section end -->
+        
+        
+         <!-- Media section start -->
+        <div class="section">
+            <h1><span>My Media</span></h1>
+            
+        </div>
+        <!-- Media section end -->
+        
+        <!-- Form section start -->
+       <div class="section" id="Contact">
+            <h1><span>Contact Me</span></h1>
+            
+            <!-- <svg class="face" height="100" width="100">
+                <circle cx="50" cy="50" r="50" fill="#FDD835"/>
+                <circle cx="30" cy="30" r="10" fill="#FFFFFF"/>
+                <circle cx="70" cy="30" r="10" fill="#FFFFFF"/>
+                <circle cx="30" cy="30" r="5" fill="#000000"/>
+                <circle cx="70" cy="30" r="5" fill="#000000"/>
+                <path d="M 30 70 q 20 20 40 0" stroke="#FFFFFF" stroke-width="5" fill="none" />
+            </svg> -->
+                 
+            <form>
+                <input name="name" placeholder="Name" type="text" required /><br/>
+                <input name="email" placeholder="Email" type="email" required /><br/>
+                <textarea name="message" placeholder="Message" required ></textarea>
+                <input type="submit" value="SEND" class="submit" />
+            </form>
+        </div>
+        <!-- Form section end -->
+        
+        <!-- Contacts section start -->
+        <div class="section" id="Social">
+            <h1><span>Follow Me</span></h1>
+
+                <a href="https://www.sololearn.com/" target="_blank">
+                    <img alt="SoloLearn" src="https://www.sololearn.com/Uploads/icons/sololearn.png" />
+                </a>
+                <a href="#">
+                    <img alt="Facebook" src="https://www.sololearn.com/Uploads/icons/facebook.png"/>
+                </a>
+
+        </div>
+        <!-- Contacts section end -->
+        
+        <div style="text-align: center; font-size: 8pt;">
+            &copy; 2023 My Blog. All rights reserved.
+        </div>
+    
+    </body>
+</html>

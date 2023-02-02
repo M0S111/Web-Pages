@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+		/*$(document).ready(function(){
+
+			setInterval(randRepeat);
+
+			function randRepeat(){
+
+				var xpos = Math.random() * 1000;
+				var ypos = Math.random() * 1000;
+
+    			$("#mycirc").animate({cx: xpos,cy: ypos},"slow");
+    		};
+
+    	});*/
+	</script>
+
+	<style type="text/css">
+
+		#golay {
+
+			width: 100%;
+			height: 400px;
+			border-radius: 30px;
+			border-style: double;
+			/*border-spacing: 30px;*/
+			position: relative;
+			box-shadow: 
+				0 0 10px #fff,
+		    	-10px 10px 80px #f0f,
+		    	10px -10px 80px #0ff,
+		    	inset 0 0 50px #fff,
+		    	inset 0px -15px 30px #f0f,
+		    	inset 0px 15px 30px #0ff,
+		    	inset 0px -15px 70px #f0f,
+		    	inset 0px 15px 70px #0ff;
+		    animation: pulsate 1s linear infinite alternate;
+		}
+		
+		@keyframes pulsate {
+
+			100% {
+		    	box-shadow:
+		    	0 0 20px #fff,
+		    	-20px 20px 80px #f0f,
+		    	20px -20px 80px #0ff,
+		    	inset 0 0 50px #fff,
+		    	inset 0px -30px 30px #f0f,
+		    	inset 0px 30px 30px #0ff,
+		    	inset 0px -30px 70px #f0f,
+		    	inset 0px 30px 70px #0ff;
+		    }
+		}
+
+	</style>
+
+	<title>Chavalz</title>
+</head>
+<body style="background-color: black;">
+
+	<div id="golay"></div>
+
+</body>
+</html>
