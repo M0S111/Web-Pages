@@ -10,22 +10,32 @@
                 var num = 0;
 
                 $("#gola").click(function(){
-                $(this).addClass("section");
-                $(this).css({"display":"block","width":"70%","height":"auto"});
-                $(this).html($("div:not(:empty)").eq(num).html());
-                num++;
-                if (($(this).css("border-radius"))!='10px') 
-                    {$(this).animate({
-                  borderRadius: '10px'},1,function(){$(this).animate({
-                  borderRadius: '50%'})});
+
+                    var w = $("div:has(p),div:has(li),div:has(form),div:has(img)").eq(num).width();
+                    var h = $("div:has(p),div:has(li),div:has(form)").eq(num).height();
 
                     $(this).animate({
-                  borderRadius: '10px'});
-                }
+                      borderRadius: '10px',width: w+"px",height: h+"px"});
+                    $(this).addClass("section");
+                    $(this).css({"display":"block","width":"auto","height":"auto"});
 
-                if ($(this).is($(":contains('rights')"))) {
-                    num = 0;
-                    $(this).html($("#About").html());}
+                    $(this).html($("div:has(p),div:has(li),div:has(form),div:has(a)").eq(num).html());
+
+                    
+                    
+
+                    var cont = $("div:has(p),div:has(li),div:has(form),div:has(a)").get();
+
+                    var l = cont.length;
+
+                    num++;
+                    //console.log(num);
+
+                    if (num == l)
+                    {
+                        num = 0;
+                        //$(this).html($("#About").html());
+                    }
                 
                 });
             });
@@ -94,8 +104,8 @@
                 background:rgba(255, 0, 255, 0.3);
                 padding: 15px;
                 margin: auto;
-                margin-bottom: 30px;
-                width: 700px;
+                margin-left: 20px;
+                margin-right: 20px;
                 height: auto;
                 text-align: center;
                 border-radius: 50%;
@@ -233,7 +243,7 @@
 
     <body>
 
-        <div id="gola"></div>
+        <p id="gola"></p>
 
         <!-- header start -->
         <!-- <div id="header" class="section">
