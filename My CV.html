@@ -3,13 +3,18 @@
     <head>
         <title>My CV</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script> 
             $(document).ready(function(){
 
+                $("#gola").fadeIn(3000);
+
                 var num = 0;
 
                 $("#gola").click(function(){
+
+                    $("i").css({"display":"none"});
 
                     var w = $("div:has(p),div:has(li),div:has(form),div:has(img)").eq(num).width();
                     var h = $("div:has(p),div:has(li),div:has(form)").eq(num).height();
@@ -51,9 +56,12 @@
                 padding: 10px;
             }
             #gola {
+            display: none;
             position: relative;
-            width: 50px;
-            height: 50px;
+            text-align: center;
+            bottom: 50%;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             margin: auto;
             margin-bottom: 30px;
@@ -237,13 +245,20 @@
             #Social {
                 text-align: center;
             }
+            i {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 25px;
+                width: 50%;
+            }
 
         </style>
     </head>
 
     <body>
 
-        <p id="gola"></p>
+        <p id="gola"><i style="font-size:24px; color: #20bcd5" class="fa">&#xf245;</i></p>
 
         <!-- header start -->
         <!-- <div id="header" class="section">
@@ -317,10 +332,10 @@
             <h1><span>Follow Me</span></h1>
 
                 <a href="https://www.sololearn.com/" target="_blank">
-                    <img alt="SoloLearn" src="https://www.sololearn.com/Uploads/icons/sololearn.png" />
+                    <img alt="SoloLearn" src="https://www.sololearn.com/Uploads/icons/sololearn.png" style="width: 70px; height: 70px;" />
                 </a>
                 <a href="#">
-                    <img alt="Facebook" src="https://www.sololearn.com/Uploads/icons/facebook.png"/>
+                    <img alt="Facebook" src="https://www.sololearn.com/Uploads/icons/facebook.png" style="width: 70px; height: 70px;" />
                 </a>
 
         </div>
