@@ -17,12 +17,12 @@
                     $("i").css({"display":"none"});
 
                     var w = $("div:has(p),div:has(li),div:has(form),div:has(img)").eq(num).width();
-                    var h = $("div:has(p),div:has(li),div:has(form)").eq(num).height();
+                    var h = $("div:has(p),div:has(li),div:has(form),div:has(img)").eq(num).height();
 
                     $(this).animate({
                       borderRadius: '10px',width: w+"px",height: h+"px"});
                     $(this).addClass("section");
-                    $(this).css({"display":"block","width":"auto","height":"auto"});
+                    $(this).css({"display":"block"});
 
                     $(this).html($("div:has(p),div:has(li),div:has(form),div:has(a)").eq(num).html());
 
@@ -103,6 +103,10 @@
                 margin: 0;
                 color: #20bcd5;
             }
+            .content:hover {
+
+                filter: drop-shadow(5px 5px 5px white);
+            }
             .img-circle {
                 border: 3px solid white;
                 border-radius: 50%;
@@ -154,7 +158,7 @@
                 font-weight: bold;
                 text-align: center;
             }
-            .quote {
+            #quote {
                 font-size: 12pt;
                 text-align: center;
                 margin-top: 10px;
@@ -230,17 +234,8 @@
                 margin-top: -35px;
                 margin-bottom: -25px;
             }*/
-            #Social img {
-                height: 10px;
-                width: 10px;
-                margin-left: 7px;
-                margin-right: 7px;
-            }
-            #Social a {
-                text-decoration: none;
-            }
-            #Social img:hover {
-                opacity: 0.8;
+            img:hover {
+                filter: drop-shadow(5px 5px 10px white);
             }
             #Social {
                 text-align: center;
@@ -271,9 +266,9 @@
         <div class="section" id="About">
             <h1><span style="font-size: x-large;">Mohammad Sheharyar</span></h1>
             <p class="content">
-                Hey! I'm <strong>Sheharyar</strong>. Coding has changed my world. It's not just about apps. Learning to code gave me <i>problem-solving skills</i> and a way to communicate with others on a technical level. I can also develop websites and use my coding skills to get a better job.
+                Hey! I'm <strong>Sheharyar</strong>. And I'm a <em>wizard</em> or at least the next best thing.
             </p>
-            <p class="quote">"Declare variables, not war"</p>
+            <p class="content" id="quote">"Declare variables, not war"</p>
         </div>
         <!-- About Me section end -->
         
