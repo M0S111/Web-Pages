@@ -52,7 +52,7 @@
                 font-family: "Consolas";
                 font-size: 13pt;
                 background-color: #000000;
-                color: #20bcd5;
+                color: #ffffff;
                 padding: 10px;
             }
             #gola {
@@ -60,40 +60,41 @@
             position: relative;
             text-align: center;
             bottom: 50%;
-            width: 70px;
-            height: 70px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
+            border-style: hidden;
             margin: auto;
             margin-bottom: 30px;
             box-shadow: 
-                0 0 10px #fff,
-                -10px 10px 80px #f0f,
-                10px -10px 80px #0ff,
-                inset 0 0 50px #fff,
-                inset 0px -15px 30px #f0f,
-                inset 0px 15px 30px #0ff,
-                inset 0px -15px 70px #f0f,
-                inset 0px 15px 70px #0ff;
+                0 0 10px #ff0000,
+                -10px 10px 80px #ff1a1a,
+                10px -10px 80px #ff3333,
+                inset 0 0 50px #ff0000,
+                inset 0px -15px 30px #ff1a1a,
+                inset 0px 15px 30px #ff3333,
+                inset 0px -15px 70px #ff1a1a,
+                inset 0px 15px 70px #ff3333;
             animation: pulsate 1s linear infinite alternate;
             }
             h1 {
                 font-size: 15pt;
-                color: #20bcd5;
+                color: #ffffff;
                 text-align: center;
                 padding: 18px 0 18px 0;
                 margin: 0 0 10px 0;
             }
             h1 span {
-                border-bottom: 4px solid #20bcd5;
+                border-bottom: 4px solid #ffffff;
                 box-shadow: 
                     /*0 0 10px #fff,*/
-                    -10px 10px 80px #f0f,
-                    10px -10px 80px #0ff,
+                    -10px 10px 80px #ffcccc,
+                    10px -10px 80px #ff9999,
                     inset 0 0 50px #fff,
-                    inset 0px -15px 30px #f0f,
-                    inset 0px 15px 30px #0ff,
-                    inset 0px -15px 70px #f0f,
-                    inset 0px 15px 70px #0ff;
+                    inset 0px -15px 30px #ffcccc,
+                    inset 0px 15px 30px #ff9999,
+                    inset 0px -15px 70px #ffcccc,
+                    inset 0px 15px 70px #ff9999;
                 animation: pulsate 1s linear infinite alternate;
                 border-radius: 10px;
                 padding: 10px;
@@ -101,7 +102,7 @@
             .content {
                 padding: 0;
                 margin: 0;
-                color: #20bcd5;
+                color: palevioletred;
             }
             .content:hover {
 
@@ -113,7 +114,7 @@
             }
             .section {
                 display: none;
-                background:rgba(255, 0, 255, 0.3);
+                background:rgba(255, 255, 255, 0.3);
                 padding: 15px;
                 margin: auto;
                 margin-left: 20px;
@@ -125,21 +126,11 @@
                 border-width: thin;
                 border-color: blueviolet;*/
                 position: static;
-                box-shadow: 
-                    0 0 10px #fff,
-                    -10px 10px 80px #f0f,
-                    10px -10px 80px #0ff,
-                    inset 0 0 50px #fff,
-                    inset 0px -15px 30px #f0f,
-                    inset 0px 15px 30px #0ff,
-                    inset 0px -15px 70px #f0f,
-                    inset 0px 15px 70px #0ff;
-                animation: pulsate 1s linear infinite alternate;
             }
             @keyframes pulsate {
 
             100% {
-                box-shadow: 0 0 20px #fff, -20px 20px 80px #f0f, 20px -20px 80px #0ff, inset 0 0 50px #fff, inset 0px -30px 30px #f0f, inset 0px 30px 30px #0ff, inset 0px -30px 70px #f0f, inset 0px 30px 70px #0ff;}
+                box-shadow: 0 0 20px #000, -20px 20px 80px #990000, 20px -20px 80px #4d0000, inset 0 0 50px #000, inset 0px -30px 30px #990000, inset 0px 30px 30px #4d0000, inset 0px -30px 70px #990000, inset 0px 30px 70px #4d0000;}
             }
 
             #header {
@@ -253,7 +244,7 @@
 
     <body>
 
-        <p id="gola"><i style="font-size:24px; color: #20bcd5" class="fa">&#xf245;</i></p>
+        <p id="gola"><!--<i style="font-size:24px;color: #20bcd5" class="fa">&#xf245;</i>--></p>
 
         <!-- header start -->
         <!-- <div id="header" class="section">
